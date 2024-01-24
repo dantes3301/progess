@@ -1,0 +1,26 @@
+@@include('components/_header.html', {title: 'Учебные программы'})
+<div class="main-wrapper">
+    <div class="breadcrumbs__container">
+        <div class="container">
+            <nav>
+                <ul class="breadcrumbs">
+                    <li class="breadcrumb-item"><a href="#" class="breadcrumbs_link">Главная</a></li>
+                    <li class="breadcrumb-item"><p>Учебные программы</p></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="block-teacher-programm">
+        <div class="container">
+            <div class="choice__title">
+                <h2>
+                    Учебные программы
+                </h2>
+            </div>
+            @@include('components/_teacherProgramm.html')
+        </div>
+    </div>
+</div>
+<script src="js/indexAccardeon.js"></script>
+<script src="js/teacherProgramm.js"></script>
+@@include('components/_footer.html')

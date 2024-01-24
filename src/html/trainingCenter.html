@@ -1,0 +1,119 @@
+@@include('components/_header.html', {title: 'Свединья об оброзовательном центре'})
+    <div class="main-wrapper">
+        <div class="breadcrumbs__container">
+            <div class="container">
+                <nav>
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumb-item"><a href="#" class="breadcrumbs_link">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="#" class="breadcrumbs_link">Об учебном центре</a></li>
+                        <li class="breadcrumb-item"><p>О центре</p></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="training-center">
+            <div class="container">
+                <div class="training-center__row">
+                    <div class="training-center__column-one">
+                        <div class="training-center__menu">
+                            <div class="training-center__menu-item active">
+                                <a href="#!" class="link link_grey">О центре</a>
+                            </div>
+                            <div class="training-center__menu-item">
+                                <a href="#!" class="link link_grey">Коллектив</a>
+                            </div>
+                            <div class="training-center__menu-item">
+                                <a href="#!" class="link link_grey">История и достижения</a>
+                            </div>
+                            <div class="training-center__menu-item">
+                                <a href="#!" class="link link_grey">Отзывы</a>
+                            </div>
+                            <div class="training-center__menu-item">
+                                <a href="#!" class="link link_grey">Фотогаллерея</a>
+                            </div>
+                        </div>
+                        @@include('components/_selectTrainingCenter.html', {SelectTitle: 'О центре'})
+                    </div>
+                    <div class="training-center__column-two">
+                        <div class="training-center__title">
+                            <div class="title-wrapper">
+                                <h1>
+                                    О центре
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="about">
+                            <div class="about__info">
+                                <div class="about__text">
+                                    <p>Учебный центр «ПРОГРЕСС» является центром профессионального обучения, дополнительного профессионального образования. Мы реализуем более 700 образовательных программ. Нашими клиентами являются как крупные промышленные предприятия, представители среднего и малого бизнеса так и физические лица.</p>
+                                    <p>Прогрессивный подход к потребностям клиентов и гибкая ценовая политика нашего центра позволяют Вам получить образовательные услуги на высочайшем уровне с учетом экономии времени и средств.</p>
+                                    <p>Учебный центр «ПРОГРЕСС» – это высококвалифицированные специалисты с многолетним практическим опытом работы в различных отраслях промышленности, благодаря чему мы заслужили доверие многих наших клиентов.</p>
+                                </div>
+                                <div class="about__image">
+                                    <img src="images/about.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="about__frames">
+                                <div class="about__frame">
+                                    <div class="about__frame-title">
+                                        <p>10 лет</p>
+                                    </div>
+                                    <div class="about__frame-text">
+                                        <p>опыта в образовании</p>
+                                    </div>
+                                </div>
+                                <div class="about__frame">
+                                    <div class="about__frame-title">
+                                        <p>700</p>
+                                    </div>
+                                    <div class="about__frame-text">
+                                        <p>образовательных программ</p>
+                                    </div>
+                                </div>
+                                <div class="about__frame">
+                                    <div class="about__frame-title">
+                                        <p>12+</p>
+                                    </div>
+                                    <div class="about__frame-text">
+                                        <p>филиалов в стране</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="history-title">
+                                <div class="title-wrapper">
+                                    <h2>История и достижения</h2>
+                                </div>
+                            </div>
+                            <div class="history">
+                                <div class="history__info">
+                                    <div class="history__text">
+                                        <p>Учебный центр «ПРОГРЕСС» является центром профессионального обучения, дополнительного профессионального образования. Мы реализуем более 700 образовательных программ. Нашими клиентами являются как крупные промышленные предприятия, представители среднего и малого бизнеса так и физические лица.</p>
+                                        <p>Прогрессивный подход к потребностям клиентов и гибкая ценовая политика нашего центра позволяют Вам получить образовательные услуги на высочайшем уровне с учетом экономии времени и средств.</p>
+                                    </div>
+                                    <div class="history__text hidden">
+                                        <p>Учебный центр «ПРОГРЕСС» является центром профессионального обучения, дополнительного профессионального образования. Мы реализуем более 700 образовательных программ. Нашими клиентами являются как крупные промышленные предприятия, представители среднего и малого бизнеса так и физические лица.</p>
+                                        <p>Прогрессивный подход к потребностям клиентов и гибкая ценовая политика нашего центра позволяют Вам получить образовательные услуги на высочайшем уровне с учетом экономии времени и средств.</p>
+                                    </div>
+                                    <div class="history__btn">
+                                        <div class="btn-wrapper">
+                                            <button class="btn btn_background-none read-full">
+                                                Читать  полностью
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="history__image">
+                                    <img src="images/history.jpg" alt="">
+                                </div>
+                            </div>
+                            @@include('components/_leaders.html')
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @@include('components/_companiesFooter.html')
+    </div>
+    <script src="js/trainingCenterReadFull.js"></script>
+    <script src="js/select/selectTrainingCenter.js"></script>
+@@include('components/_footer.html')

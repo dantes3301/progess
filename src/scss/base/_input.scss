@@ -1,0 +1,20 @@
+.inp{
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #929292;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 17px 20px;
+    transition: 0.6s;
+    &:focus{
+        border: 1px solid #92D1FF;
+    }
+    &.error{
+        border: 1px solid #E92219;
+    }
+    &.access{
+        border: 1px solid #1FAB13;
+    }
+}

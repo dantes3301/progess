@@ -1,0 +1,29 @@
+a{
+    &.link{
+        transition: 0.6s;
+        &.link_grey{
+          color: $grey;
+          &:hover{
+            color: $orange;
+          }
+        }
+        &.link_light-grey{
+          color: #9F9F9F;
+          &:hover{
+            color: $orange;
+          }
+        }
+        &.link_blue{
+            color: $blue;
+            &:hover{
+                color: $orange;
+              }
+        }
+        &.link_black{
+            color: $black;
+            &:hover{
+                color: $orange;
+              }
+        }
+      }
+}

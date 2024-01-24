@@ -1,0 +1,50 @@
+.not-found{
+    margin: rem(140px) 0 0 0;
+    padding: 0 0 rem(20px) 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include tablet{
+        margin: rem(60px) 0 0 0;
+        padding: 0 0 0 0;
+    }
+}
+.found__title{
+    margin: 0 0 rem(12px) 0;
+    p{
+        font-weight: 400;
+        font-size: 44px;
+        line-height: 54px;
+        @include tablet{
+            text-align: center;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+}
+.found__text{
+    margin: 0 0 rem(40px) 0;
+    p{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        @include tablet{
+            text-align: center;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+}
+.found__image{
+    max-width: 588px;
+    width: 100%;
+    margin: 0 0 rem(48px) 0;
+    @include tablet{
+        padding: 0 30px;
+    }
+    img{
+        width: 100%;
+    }
+}

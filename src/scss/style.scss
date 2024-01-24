@@ -1,0 +1,45 @@
+@import "vars";
+@import "base/fonts";
+@import "base/breakpoints";
+@import "base/basic";
+@import "base/mixins";
+@import "base/button";
+@import "base/link";
+@import "base/input";
+@import "base/checkbox";
+@import "base/breadcrumbs";
+@import "base/select";
+
+@import "components/_header.scss";
+@import "components/_footer.scss";
+@import "components/_callForm.scss";
+@import "components/_teacherProgramm";
+@import "components/_companiesFooter";
+@import "components/_selectTrainingCenter";
+@import "components/_leaders";
+@import "components/_achievements";
+
+@import "blocks/index";
+@import "blocks/teacherProgramm";
+@import "blocks/map";
+@import "blocks/subcategory";
+@import "blocks/educationalСenter";
+@import "blocks/contact";
+@import "blocks/notFound";
+@import "blocks/FAQ";
+@import "blocks/trainingCenter";
+@import "blocks/teachers";
+@import "blocks/history";
+@import "blocks/reviews";
+@import "blocks/gallery";
+@import "blocks/news";
+@import "blocks/newsDetail";
+@import "blocks/teacherProgrammDetail";
+@import "blocks/teacherProgrammDetail";
+@import "blocks/privacyPolicy";
+
+@import "helpers/swiper.min";
+
+// SnoreToast
+
+

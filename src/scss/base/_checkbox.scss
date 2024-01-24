@@ -1,0 +1,55 @@
+.inp-checkbox{
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+.custom-checkbox{
+    display: block;
+    position: relative;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 0 0 0 rem(28px);
+    cursor: pointer;
+    & a{
+        color: $blue;
+        transition: .6s;
+        &:hover{
+            color: $orange;
+        }
+    }
+    &::before{
+        content: ' ';
+        width: 16px;
+        height: 16px;
+        left: 0;
+        position: absolute;
+        background: #FFFFFF;
+        border: 1px solid #929292;
+        transition: 0.6s;
+    }
+    &::after{
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(35%, 65%);
+        width: 11px;
+        height: 8px;
+        background-image: url('../images/checkMark.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% auto;
+        opacity: 0;
+        transition: 0.6s;
+    }
+}
+.inp-checkbox:checked + .custom-checkbox::before{
+    border: 1px solid $blue;
+}
+.inp-checkbox.error + .custom-checkbox::before{
+    border: 1px solid #E92219;
+}
+.inp-checkbox:checked + .custom-checkbox::after{
+    opacity: 1;
+}

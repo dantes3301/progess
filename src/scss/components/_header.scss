@@ -1,0 +1,305 @@
+.header__wrapper{
+    display: flex;
+    justify-content: space-between;
+
+}
+.header__position{
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999999;
+    box-shadow: 0px rem(4px) rem(8px) rgba(0, 0, 0, 0.08);
+    @include tablet{
+        padding: rem(13px) 0;
+    }
+}
+.header__row-one{
+    overflow: hidden;
+    max-height: 100px;
+    border-bottom: rem(1px) solid #E6E6E6;
+    transition: all .6s;
+    &.hidden{
+        max-height: 0;
+        border-bottom: none;
+    }
+    @include tablet{
+        display: none;
+    }  
+}
+.header__logo{
+    display: flex;
+    align-items: center;
+    margin: 0 rem(50px) 0 0;
+    max-width: 190px;
+    transition: all .6s;
+    img{
+        transition: all .6s;
+    }
+    &.active{
+        max-width: 151px;
+        img{
+            max-width: 151px;
+        }
+    }
+    @include desktop_small{
+        margin: 0 20px 0 0;
+    }
+    @include tablet{
+        svg{
+            width: 100%;
+        }
+        img{
+            max-width: 102px;
+            width: 100%;
+            min-width: rem(102px);
+        }
+    }
+}
+.header__column{
+    border-left: rem(1px) solid #E6E6E6;
+    max-width: rem(1050px);
+    width: 100%;
+    margin: 10px 0;
+    padding: 0 0 0 20px;
+    @include tablet{
+        border: none;
+        margin: 0;
+        padding: 0 0 0 0;
+    }
+}
+.header__rows{
+    max-width: rem(999px);
+    width: 100%;
+    float: right;
+}
+.header__row-two{
+    .personal-area__icons{
+        display: none;
+    }
+    &.active{
+        padding: 10px 0;
+        .header__navigation-menu{
+            height: 18px;
+        }
+        .phone{
+            height: 18px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .personal-area__icons{
+                display: flex;
+                a{
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            .phone__number{
+                margin: 0 40px 0 0;
+                @include desktop_small{
+                    margin: 0 10px 0 0;
+                }
+            }
+        }
+        .menu-two-wrapper{
+            padding: 0;
+        }
+    }
+    @include tablet{
+        display: none;
+    }
+}
+.header__menu{
+    display: flex;
+    justify-content: space-between;
+    padding: rem(6px) 0 rem(16px) 0;
+    width: 100%;
+    
+}
+.menu__links{
+    display: flex;
+    align-content: center;
+    height: rem(20px);
+    a {
+        font-size: rem(14px);
+        line-height: rem(17px);
+        svg{
+            path{
+                transition: .6s;
+            }
+            &:hover{
+                path{
+                    fill: $orange;
+                }
+            }
+        }
+    }
+    & :not(:last-child){
+        margin: 0 rem(45px) 0 0;
+        @include desktop_small{
+            margin: 0 rem(20px) 0 0;
+        }
+    }
+}
+.personal-area__link{
+    margin: 0 rem(18px) 0 0;
+    a {
+        display: flex;
+        align-items: center;
+        color: #4E4E4E;
+        p{
+            line-height: rem(19px);
+            margin: 0 0 0 rem(6px);
+        }
+    }
+}
+.personal-area__icons{
+    display: flex;
+    & :not(:last-child){
+        margin: 0 rem(8px) 0 0;
+    }
+}
+.menu__personal-area{
+    display: flex;
+    height: rem(20px);
+}
+.menu-two-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: rem(16px) 0 rem(6px) 0;
+    width: 100%;
+    
+}
+.header__navigation-menu{
+    max-width: 629px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & :not(:last-child){
+        margin: 0 rem(10px) 0 0;
+    }
+    a {
+        font-weight: 400;
+        font-size: rem(16px);
+        line-height: rem(19px);
+    }
+}
+.phone{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: max-content;
+    margin: 0 0 0 rem(20px);
+}
+.phone__number{
+    margin: 0 0 rem(6px) 0;
+    a {
+        display: flex;
+        align-items: center;
+        svg{
+            margin: 0 rem(12px) 0 0;
+        }
+        p {
+            font-weight: 400;
+            font-size: rem(18px);
+            line-height: rem(22px);
+        }
+    }
+    @include tablet{
+        margin: 0 0 0 0;
+    }
+}
+.request-call{
+    button{
+        font-family: $Tahoma;
+        font-weight: 400;
+        font-size: rem(16px);
+        line-height: rem(18px);
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #004084;
+        transition: 0.6s;
+        &:hover{
+            color: $orange;
+        }
+    }
+    &.hidden{
+        display: none;
+    }
+}
+.header__row-mobile{
+   display: none;
+   @include tablet{
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: center;
+   }
+}
+.header__menu-burger{
+    margin: rem(5px) 0 0 rem(22px);
+    @media screen and (max-width: 377px) {
+        margin: rem(5px) 0 0 rem(5px);
+    }
+    & svg:last-child{
+        display: none;
+    }
+    .button-burger{
+        background: none;
+        border: none;
+        width: rem(35px);
+        height: rem(33px);
+    }
+    & .button-burger.active{
+        & svg:first-child{
+            display: none;
+        }
+        & svg:last-child{
+            display: block;
+        }
+    }
+}
+.header__mibile-menu{
+    max-height: 0;
+    overflow: hidden;
+    transition: all .8s;
+    position: fixed;
+    top: rem(58px);
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 rem(15px);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &.active{
+        padding: rem(30px) rem(15px);
+        max-height: 100%;
+        overflow: auto;
+    }
+    & .header__navigation-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        a{
+            font-size: rem(18px);
+            margin: 0 0 rem(24px) 0;
+        }
+    }
+    .menu__links{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        height: 100%;
+        a{
+            margin: 0 0 rem(16px) 0;
+            font-size: rem(18px);
+        }
+    }
+}

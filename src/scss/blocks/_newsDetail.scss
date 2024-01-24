@@ -1,0 +1,211 @@
+.breadcrumbs__container-news{
+    .breadcrumbs-news {
+        padding: 10px 16px;
+        list-style: none;
+        margin: 28px 0 0 0;
+        @include tablet{
+            display: none;
+        }
+      }
+      
+      /* Отображение элементов списка бок о бок */
+      ul.breadcrumbs-news li {
+        display: inline;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #9A9A9A;
+      }
+      
+      /* Добавить символ косой черты (/) перед/за каждым элементом списка */
+      ul.breadcrumbs-news li+li:before {
+        padding: 0px;
+        color: black;
+        content: "/\00a0";
+        font-size: 16px;
+      }
+      
+      /* Добавить цвет для всех ссылок внутри списка */
+      ul.breadcrumbs-news li a {
+        color: rgba(0, 64, 132, 0.6);
+        text-decoration: none;
+        transition: .6s;
+        font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+      }
+      
+      /* Добавить цвет на наведении курсора мыши */
+      ul.breadcrumbs-news li a:hover {
+        color: $orange;
+      }
+}
+
+.article-quest{
+    display: flex;
+    justify-content: center;
+    margin: rem(48px) 0 rem(40px) 0;
+    @include tablet{
+        margin: rem(30px) 0 rem(34px) 0;
+    }
+}
+.article-quest__text{
+    margin: 0 rem(24px) 0 0;
+    p{
+        font-weight: 400;
+        font-size: rem(16px);
+        line-height: rem(19px);
+    }
+}
+.article-quest__option{
+    cursor: pointer;
+    padding: 0;
+    color: #9F9F9F;
+    font-weight: 700;
+    font-size: rem(16px);
+    line-height: rem(19px);
+    border: none;
+    background: none;
+    border-bottom: rem(2px) solid #CDCDCD;
+    margin: 0 rem(16px) 0 0;
+}
+.mailing{
+    background: #004084;
+    border-radius: 20px;
+    padding: 26px 28px;
+    margin: 0 0 80px 0;
+    @include desktop_base{
+        padding: 20px;
+        .mailing__form{
+            .mailing__title{
+                margin: 0 0 20px 0;
+                max-width: 100%;
+            }
+            display: block;
+        }
+    }
+    @include tablet{
+        margin: 0 0 60px 0;
+    }
+}
+.mailing__form{
+    display: flex;
+    justify-content: space-between;
+    @include tablet{
+        flex-direction: column;
+    }
+}
+.mailing__title{
+    margin: 0 20px 0 0;
+    max-width: 253px;
+    p{
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: #fff;
+    }
+    @include tablet{
+        max-width: 100%;
+        width: 100%;
+        margin: 0 0 20px 0;
+        p{
+            text-align: center;
+        }
+    }
+}
+.mailing__btn{
+    @include mobile{
+        width: 100%;
+        .btn{
+            width: 100%;
+        }
+    }
+}
+.mailing__form-container{
+    display: flex;
+    align-items: center;
+    @include tablet{
+        flex-direction: column;
+    }
+}
+.mailing__input{
+    margin: 0 16px 0 0;
+    @include tablet{
+        margin: 0 0 16px 0;
+        width: 100%;
+        .inp{
+            width: 100%;
+        }
+    }
+}
+.read__title{
+    margin: 0 0 40px 0;
+    @include tablet{
+        margin: 0 0 20px 0;
+    }
+}
+.read__cards-scroll{
+    @include tablet{
+        overflow: auto;
+        &::-webkit-scrollbar{
+            width: 0;
+        }
+    }
+}
+.read__cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    @include tablet{
+        display: flex;
+    }
+}
+.read__card{
+    width: 100%;
+    max-width: 300px;
+    width: 100%;
+    @include tablet{
+        max-width: 286px;
+        min-width: 286px;
+    }
+}
+.read__card-image{
+    margin: 0 0 28px 0;
+    img{
+        border-radius: 20px 20px 0px 0px;
+        width: 100%;
+    }
+}
+.read__card-date{
+    margin: 0 0 10px 0;
+    p{
+        color: #9A9A9A;
+    }
+}
+.read__card-text{
+    p{
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 28px;
+        color: #000000;
+    }
+}
+.selected-tags{
+    display: flex;
+    margin: 0 0 40px 0;
+    @include tablet{
+        margin: 0 0 20px 0;
+    }
+}
+.selected-tag{
+    background: rgba(0, 64, 132, 0.12);
+    border-radius: rem(30px);
+    padding: rem(8px) rem(12px);
+    border: none;
+    margin: rem(5px) rem(4px);
+    color: #004084;
+    font-weight: 400;
+    font-size: rem(14px);
+    line-height: rem(20px);
+    transition: .6s;
+}

@@ -1,0 +1,98 @@
+.teachers__card{
+    max-width: rem(207.5px);
+    width: 100%;
+    border-radius: rem(20px) rem(20px) 0px 0px;
+    overflow: hidden;
+    .teachers__card-img{
+        margin: 0 0 rem(24px) 0;
+    }
+    img{
+        width: 100%;
+        border-radius: 20px rem(20px) 0px 0px;
+    }
+    &:not(:last-child){
+        margin: 0 (30px) 0 0;
+    }
+    @include tablet{
+        max-width: rem(298px);
+        min-width: rem(298px);
+        width: 100%;
+    }
+}
+.teachers__cards-slider{
+    @include tablet{
+        overflow: auto;
+        &::-webkit-scrollbar{
+            width: 0px;
+        }
+    }
+}
+.teacher__card-name{
+    margin: 0 0 rem(8px) 0;
+    p{
+        font-weight: 400;
+        font-size: rem(18px);
+        line-height: rem(22px);
+    }
+}
+.teacher__card-text{
+    p{
+        color: #747474;
+    }
+}
+.teachers__cards-slider{
+    display: flex;
+    justify-content: space-between;
+}
+.teachers__title{
+    margin: 0 0 rem(40px) 0;
+    @include tablet{
+        margin: 0 0 rem(20px) 0;
+    }
+}
+.teachers{
+    margin: rem(80px) 0 rem(80px) 0;
+    @include tablet{
+        margin: rem(40px) 0 rem(40px) 0;
+    }
+}
+.administration{
+    margin: rem(80px) 0 rem(80px) 0;
+    @include tablet{
+        margin: rem(40px) 0 rem(40px) 0;
+    }
+}
+.team{
+    background: #004084;
+    border-radius: rem(20px);
+    padding: rem(32px) rem(28px);
+    p, a{
+        color: #fff;
+        text-align: center;
+    }
+}
+.team__title{
+    margin: 0 0 rem(8px) 0;
+    p{
+        font-weight: 400;
+        font-size: rem(36px);
+        line-height: rem(40px);
+        @include tablet{
+            font-weight: 400;
+            font-size: rem(24px);
+            line-height: rem(28px);
+        }
+    }
+}
+.team__text{
+    p{
+        font-weight: 400;
+        font-size: rem(22px);
+        line-height: rem(26px);
+        @include tablet{
+            font-weight: 400;
+            font-size: rem(18px);
+            line-height: rem(26px);
+        }
+    }
+}

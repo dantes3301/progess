@@ -1,0 +1,53 @@
+.training-center__select{
+    display: none;
+    @include tablet{
+        display: block;
+        &.active{
+            .training-center__select-body{
+                padding: 12px rem(16px);
+                max-height: 500px;
+                margin: 0 0 rem(8px) 0;
+            }
+            svg{
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+.training-center__select-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: rem(20px);
+    padding: rem(24px) rem(16px);
+    margin: 0 0 rem(8px) 0;
+    svg{
+        transition: .6s;
+    }
+    span{
+        font-weight: 700;
+        font-size: rem(18px);
+        line-height: rem(22px);
+        color: #004084;
+    }
+}
+.training-center__select-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.training-center__select-body{
+    background: #FFFFFF;
+    border-radius: rem(20px);
+    padding: 0px rem(16px);
+    overflow: hidden;
+    max-height: 0;
+    transition: .6s;
+    .training-center__menu-item.active{
+        padding: rem(12px) 0;
+        & a::before{
+            display: none;
+        }
+    }
+}

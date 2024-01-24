@@ -1,0 +1,40 @@
+.btn-wrapper{
+    width: max-content;
+}
+.btn{
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(18px) rem(44px);
+    border-radius: 30px;
+    width: max-content;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    transition: 0.6s;
+    &.btn_background-blue{
+        background: #004084;
+        color: #FFFFFF;
+        &:hover{
+            background: #005FC5;
+        }
+    }
+    &.btn_background-none{
+        color: #004084;
+        border: 1px solid #004084;
+        &:hover{
+            background: #005FC5;
+            border: 1px solid #005FC5;
+            color: #FFFFFF;
+        }
+    }
+    &.btn_background-orange{
+        background: #EC650A;
+        color: #FFFFFF;
+        &:hover{
+            background: #FF6700;
+        }
+    }
+}

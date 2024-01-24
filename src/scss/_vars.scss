@@ -1,0 +1,28 @@
+// Colors
+$black: #000000;
+$blue: #004084;
+$orange: #EC650A;
+$grey: #4E4E4E;
+$lightGrey: #F0F0F0;
+
+// Function
+
+$base-font-size: 16;
+
+// strips away any unit from a value: e.g. "16px" => 16
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+@function rem($size, $base: $base-font-size) {
+  $pxUnitless: strip-unit($size);
+  @return #{$pxUnitless / $base}rem;
+}
+
+
+// Fonts
+$RobotoSerif: Roboto Serif, sans-serif; //title
+$Tahoma: Tahoma, sans-serif; //text

@@ -1,0 +1,96 @@
+.achievements__title{
+}
+.achievements{
+    h4{
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 36px;
+        margin: 0 0 rem(28px) 0;
+        @include tablet{
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 26px;
+            margin: 0 0 rem(24px) 0;
+        }
+    }
+    p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        margin: 0 0 rem(16px) 0;
+        @include tablet{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+}
+.achievements__text{
+    p{
+        &:not(:last-child){
+            margin: 0 0 rem(16px) 0;
+        }
+    }
+}
+// img{
+//     width: 100%;
+//     margin: 40px 0;
+// }
+// .achievements__info{
+//     img{
+//         width: 49%;
+//     }
+//     margin: 40px 0;
+// }
+.a{
+    display: inline-block;
+    width: 48%;
+    margin: 40px 0 40px 0;
+    &.b{
+        margin: 40px 20px 40px 0;
+    }
+
+}
+@media screen and (max-width: 1144px) {
+    .a{
+        width: 47%;
+    }
+}
+.a{
+    @include tablet{
+        display: block;
+        width: 100%;
+        margin: 40px 0 0 0;
+        &.b{
+            margin: 40px 0 20px 0;
+        }
+        &.c{
+            margin: 0 0 40px 0;
+        }
+    }
+}
+// .achievements__image{
+//     img{
+//         width: 100%;
+//         margin: 0 0 0;
+//     }
+// }
+.achievements__images{
+    display: flex;
+    justify-content: space-between;
+    img{
+        // width: 50%;
+        &:not(:last-child){
+            margin: 0 rem(20px) 0 0;
+        }
+    }
+    @include tablet{
+        flex-direction: column;
+        img{
+            width: 100%;
+            &:not(:last-child){
+                margin: 0 0 rem(20px) 0;
+            }
+        }
+    }
+}

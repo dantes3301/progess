@@ -1,0 +1,457 @@
+.teacher-programm__tabs{
+    display: flex;
+}
+.teacher-programm__tab{
+    border: none;
+    cursor: pointer;
+    margin: 0 0 rem(-1px) 0;
+    border-radius: rem(20px) rem(20px) 0px 0px;
+    padding: rem(24px) rem(80px);
+    background: rgba(0, 64, 132, 0.2);
+    width: max-content;
+    transition: .6s;
+    font-weight: 400;
+        font-size: rem(22px);
+        line-height: rem(28px);
+        color: #004084;
+        @include tablet{
+            font-family: $Tahoma;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+        }
+    &:hover{
+        background: rgba(0, 64, 132, 0.35);
+    }
+    @include tablet{
+        padding: 12px 34px;
+    }
+    @include mobile{
+        width: 100%;
+    }
+    p{
+        
+    }
+    &.active{
+        background: #004084;
+
+            color: #fff;
+        
+    }
+}
+
+.teacher-programm{
+    background: #004084;
+    border-radius: 0px rem(20px) rem(20px) rem(20px);
+    padding: rem(56px) rem(32px);
+    overflow: hidden;
+    position: relative;
+    @include tablet{
+        padding: rem(24px) rem(12px);
+    }
+    @include mobile{
+        border-radius: 0px 0px rem(20px) rem(20px);
+    }
+}
+.teacher-programm__input{
+    margin: 0 0 rem(36px) 0;
+    .input-container{
+        position: relative;
+        &.active{
+            .inp_found__options{
+                display: flex;
+                flex-direction: column;
+                max-height: 100px;
+                padding: 16px 20px;
+                &.error{
+                    a{
+                        color: #FF8782;
+                    }
+                }
+            }
+            .inp_found__delete{
+                display: block;
+            }
+        }
+    }
+    .input-container__icon{
+        position: absolute;
+        top: rem(14px);
+        right: 0;
+        opacity: 0.8;
+        & button{
+            padding: 0;
+            background: none;
+            cursor: pointer;
+            border: none;
+        }
+    }
+}
+.inp.inp_found{
+    border: none;
+    border-bottom: rem(1px) solid rgba(255, 255, 255, 0.7);
+    border-radius: 0 0 0 0;
+    background: none;
+    padding: rem(20px) 0;
+    color: #FFFFFF;
+    
+    font-weight: 400;
+    font-size: rem(16px);
+    line-height: rem(19px);
+    width: 100%;
+    &::placeholder {
+        font-family: $Tahoma;
+        font-weight: 400;
+        font-size: rem(16px);
+        line-height: rem(19px);
+        color: #FFFFFF;
+        opacity: 0.8;
+      }
+      &:focus::-webkit-input-placeholder {
+        color: transparent
+      }
+}
+.inp_found__delete{
+    display: none;
+    position: absolute;
+    top: rem(18px);
+    right: 48px;
+    button{
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0;
+    }
+}
+.inp_found__options{
+    width: 100%;
+    max-height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    margin: rem(10px) 0 0 0;
+    overflow: hidden;
+    padding: 0 rem(20px);
+    a{
+        color: #fff;
+    }
+}
+.teacher-programm__frame{
+    background: #FFFFFF;
+    position: relative;
+    border-radius: rem(20px);
+    max-width: rem(600px);
+    width: 100%;
+    padding: rem(40px) rem(40px) rem(40px) rem(51px);
+    @include tablet{
+        max-width: 100%;
+        padding: 20px;
+    }
+}
+.teacher-program__all-programm-link{
+    margin: 0 0 14px 0;
+    .link{
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: rem(16px);
+        line-height: rem(20px);
+        border-bottom: 1px solid #C2C2C2;
+        width: max-content;
+        svg{
+            margin: rem(5px) 0 0 rem(10px);
+        }
+        path{
+            transition: 0.6s;
+        }
+        &:hover{
+            border-bottom: rem(1px) solid $orange;
+
+            path{
+                stroke: $orange;  
+            }
+        }
+    }
+}
+.teacher-programm__frames{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(24px);
+    margin: 0 0 rem(80px) 0;
+    transition: 0.6s;
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+
+    }
+    &.active{
+        transform: translate(0, 0);
+        opacity: 1;
+        transition: 0.6s;
+    }
+    &.hidden{
+        position: absolute;
+        opacity: 0;
+        transform: translate(100%, 0);
+        transition: 0.6s;
+    }
+}
+.teacher-programm__frame-images{
+    position: absolute;
+    height: 100%;
+    max-width: rem(190px);
+    width: 100%;
+    bottom: 0px;
+    right: 0;
+    z-index: 0;
+    @include tablet{
+        display: none;
+    }
+    img{
+        width: 100%;
+        border-radius: 0 0 20px 0;
+        position: absolute;
+        bottom: 0;
+    }
+}
+.teacher-programm__frame-content{
+    position: relative;
+    z-index: 9999;
+    @include desktop_base{
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+}
+.teacher-programm__frame-title{
+    margin: 0 0 rem(28px) 0;
+    p{
+        font-family: $RobotoSerif;
+        font-weight: 500;
+        font-size: rem(28px);
+        line-height: rem(33px);
+    }
+    @include tablet{
+        margin: 0 0 rem(24px) 0;
+        p{
+            font-family: $RobotoSerif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}
+.teacher-programm__frame-link{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 36px 0;
+    & a{
+        margin: 0 0 rem(8px) 0;
+        &:not(:first-child){
+            max-width: rem(436px);
+            width: 100%;
+        }
+    }
+}
+.not-found__title{
+    margin: 0 0 rem(12px) 0;
+    h2{
+        text-align: center;
+        font-weight: 400;
+        font-size: 44px;
+        line-height: 52px;
+        color: #FFFFFF;
+        @include tablet{
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 33px;
+        }
+    }
+}
+.not-found__text{
+    margin: 0 0 rem(40px) 0;
+    p{
+        text-align: center;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 34px;
+        color: #fff;
+    }
+    @include tablet{
+        margin: 0 0 rem(28px) 0;
+        p{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}
+.teacher-programm__organization{
+    margin: 0 0 rem(80px) 0;
+    transition: 0.6s;
+    &.active{
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    &.hidden{
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        transform: translate(-100%, 0);
+    }
+}
+.not-found__btn{
+    display: flex;
+    justify-content: center;
+}
+.organization-frame{
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: rem(20px);
+    padding: rem(28px);
+    margin: 0 0 rem(44px) 0;
+    @include tablet{
+        display: none;
+    }
+}
+.organization-frame__text{
+    max-width: 700px;
+    width: 100%;
+    margin: 0 20px 0 0;
+    p{
+        font-weight: 400;
+        font-size: rem(28px);
+        line-height: rem(36px);
+        color: #FFFFFF;
+    }
+}
+.teacher-programm-wrapper{
+    position: relative;
+}
+.organization__accardeon{
+    background-color: #fff;
+    border-radius: 20px;
+}
+.organization__accardeon-title{
+    cursor: pointer;
+    h5{
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 34px;
+        color: #4E4E4E;
+    }
+    @include tablet{
+        max-width: 600px;
+        width: 100%;
+        h5{
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}
+.organization__accardeon-item{
+    padding: 47px 40px 47px 60px;
+    position: relative;
+    border-bottom: 1px solid #C8C8C8;
+    @include tablet{
+        padding: 24px 20px;
+    }
+    &:last-child{
+        border: none;
+    }
+}
+.organization__accardeon-item.active{
+    border: none;
+    .organization__accardeon-icon{
+        position: absolute;
+        & svg{
+            transform: rotate(180deg);
+        }
+    }
+}
+.organization__accardeon-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.organization__accardeon-body{
+    display: flex;
+    justify-content: space-between;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.6s;
+}
+.organization__accardeon-item.active .organization__accardeon-body{
+    transition: all 0.6s;
+    max-height: 400px;
+    border: none;
+    .organization__accardeon-image{
+        visibility: visible;
+        opacity: 1;
+        position: absolute;
+    }
+}
+.organization__accardeon-content{
+    max-width: 540px;
+    width: 100%;
+    margin: 0 20px 0 0;
+
+}
+.organization__accardeon-links{
+    margin: rem(28px) 0 rem(36px) 0;
+    display: flex;
+    flex-direction: column;
+    a{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        margin: 0 0 rem(8px) 0;
+    }
+}
+.organization__accardeon-image{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+    max-width: 430px;
+    width: 100%;
+    top: 40px;
+    right: 48px;
+    img{
+        width: 100%;
+    }
+    @include tablet{
+        display: none;
+    }
+}
+@media screen and (max-width: 1160px) {
+    .organization__accardeon-image{
+        width: 25vw;
+        top: 80px;
+    }
+}
+.organization__accardeon-icon{
+    z-index: 99;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+    & svg{
+        transition: 0.8s;
+    }
+    @include tablet{
+        bottom: 20px;
+        right: 20px;
+    }
+}
+.teacher-programm__not-found{
+    position: relative;
+    z-index: 1;
+}
+.teacher-programm__svg{
+    position: absolute;
+    bottom: -10px;
+    right: -5%;
+    z-index: 0;
+}

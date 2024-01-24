@@ -1,0 +1,213 @@
+.educational-center-baner{
+    height: rem(291px);
+    width: 100%;
+    position: relative;
+    @include tablet{
+        height: auto;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        z-index: 0;
+        @include tablet{
+            display: none;
+        }
+    }
+    .breadcrumbs__container{
+        position: relative;
+        z-index: 1;
+        a{
+            color: #fff;
+            transition: .6s;
+            &:hover{
+                color: $orange;
+            }
+        }
+        .breadcrumb-item:before{
+            color: #BDBDBD;
+        }
+        p{
+            color: #BDBDBD;
+        }
+    }
+}
+.intelligence{
+    margin: rem(60px) 0 0 0;
+}
+.educational-center-baner__title{
+    margin: rem(51px) 0 0 0;
+    position: relative;
+    z-index: 1;
+    & h1{
+        color: #fff;
+        @include tablet{
+            color: #000;
+        }
+    }
+}
+.frame-navigation{
+    max-width: 250px;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 24px 16px;
+    margin: 0 0 40px 0;
+    @include tablet{
+        max-width: 100%;
+        display: none;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        a{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            margin: 0 0 rem(24px) 0;
+            position: relative;
+            &.active{
+                color: #004084;
+                padding: 0 0 0 32px;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                &::before{
+                    content: '';
+                    left: 0;
+                    top: 10px;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 19px;
+                    background-color: #004084;
+                    width: 15px;
+                    height: 2px;
+                    position: absolute;
+                    transition: .6s;
+                }
+                &:hover{
+                    &::before{
+                        background-color: $orange;
+                    }
+                }
+            }
+        }
+    }
+}
+.frame-information{
+    padding: 20px;
+    max-width: 250px;
+    width: 100%;
+    background: rgba(0, 64, 132, 0.08);
+    box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    @include tablet{
+        max-width: 100%;
+        margin: 0 0 rem(20px) 0;
+    }
+    ul{
+       padding: 0 0 0 rem(20px);
+    }
+    li{
+        &:not(:last-child){
+            margin: 0 0 rem(16px) 0;
+        }
+        white-space:unset;
+        font-family: 'Tahoma';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #414141;
+    }
+}
+.frame-information__title{
+    margin: 0 0 rem(16px) 0;
+    p{
+        font-family: 'Tahoma';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+.intelligence__row{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 rem(120px) 0;
+    @include tablet{
+        flex-direction: column;
+        margin: 0 0 rem(60px) 0;
+    }
+}
+.intelligence__column{
+    margin: 0 40px 0 0;
+    max-width: 250px;
+    width: 100%;
+    @include tablet{
+        max-width: 100%;
+        width: 100%;
+        margin: 0 0 0 0;
+    }
+}
+.intelligence__column-two{
+    max-width: calc(100% + 20px);
+    width: 100%;
+}
+.frame-info-links{
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 30px 40px 40px;
+    float: right;
+    @include tablet{
+        padding: 20px 15px;
+    }
+}
+.infomation__links{
+    display: flex;
+    flex-direction: column;
+    a{
+        margin: 0 0 rem(12px) 0;
+    }
+}
+.frame-table{
+    max-width: rem(1000px);
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: rem(20px);
+    padding: rem(30px) rem(40px) rem(40px);
+    float: right;
+    @include tablet{
+        padding: rem(20px) rem(15px);
+    }
+}
+table{
+    width: 100%;
+    border-collapse:collapse;
+    tbody{
+        tr{
+            background-color: rgba(0, 64, 132, 0.12);
+            @include tablet{
+                display: flex;
+            }
+        }
+        tr:nth-child(2n){
+            background-color: #fff;
+        }
+        td{
+            padding: rem(12px) rem(15px);
+            @include tablet{
+                width: 50%;
+                font-weight: 400;
+                font-size: rem(14px);
+                line-height: rem(18px);
+                padding: 8px;
+            }
+        }
+    }
+}

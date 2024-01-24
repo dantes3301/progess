@@ -1,0 +1,227 @@
+.training-center{
+    margin: rem(80px) 0 rem(120px) 0;
+    @include tablet{
+        margin: rem(40px) 0 rem(60px) 0;
+    }
+}
+.training-center__menu{
+    max-width: rem(250px);
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: rem(20px);
+    padding: rem(24px) rem(16px);
+    @include tablet{
+        display: none;
+    }
+}
+.training-center__column-one{
+    margin: 0 rem(20px) 0 0;
+    max-width: 250px;
+    width: 100%;
+    @include tablet{
+        max-width: 100%;
+        margin: 0 0 0 0;
+    }
+}
+.training-center__column-two{
+    max-width: rem(1000px);
+    width: 100%;
+    padding: rem(30px) rem(40px);
+    background: #FFFFFF;
+    border-radius: rem(20px);
+    @include tablet{
+        padding: 16px 15px;
+    }
+}
+.training-center__row{
+    display: flex;
+    justify-content: space-between;
+    @include tablet{
+        flex-direction: column;
+    }
+}
+.training-center__menu-item{
+    padding: rem(12px) 0;
+    position: relative;
+    &.active{
+        padding: rem(12px) 0 rem(12px) rem(32px);
+        a{
+            font-weight: 700;
+            font-size: rem(18px);
+            line-height: rem(22px);
+            color: #004084;
+            &:hover{
+                &::before{
+                    background: $orange;
+                }
+            }
+            &::before{
+                content: ' ';       
+                position: absolute;
+                width: rem(15px);
+                height: rem(2px);
+                top: calc(50% - 1px);
+                left: 0;
+                background-color: $blue;
+                transition: .6s;
+            }
+        } 
+    }
+    &:nth-child(3){
+        a:before{
+            top: 23px;
+        }
+    }
+}
+.training-center__title{
+    margin: 0 0 rem(60px) 0;
+    h1{
+        font-weight: 400;
+        font-size: rem(52px);
+        line-height: rem(62px);
+    }
+    @include tablet{
+        margin: 0 0 rem(30px) 0;
+        h1{
+            font-weight: 400;
+            font-size: rem(26px);
+            line-height: rem(36px);
+        }
+    }
+}
+.about__info{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 rem(60px) 0;
+    @include tablet{
+        flex-direction: column;
+        div{
+            max-width: 100%;
+        }
+        .about__text{
+            margin: 0 0 rem(24px) 0;
+        }
+    }
+}
+.about__text{
+    max-width: rem(510px);
+    width: 100%;
+    margin: 0 rem(42px) 0 0;
+    p{
+        font-weight: 400;
+        font-size: rem(16px);
+        line-height: rem(19px);
+        margin: 0 0 rem(16px) 0;
+    }
+}
+.about__image{
+    max-width: rem(370px);
+    width: 100%;
+    img{
+        width: 100%;
+    }
+}
+.about__frames{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 rem(80px) 0;
+    @include tablet{
+        flex-direction: column;
+        margin: 0 0 rem(40px) 0;
+    }
+}
+.about__frame{
+    max-width: rem(286.67px);
+    width: 100%;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.12);
+    border-radius: rem(20px);
+    padding: rem(35px);
+    &:not(:last-child){
+        margin: 0 rem(20px) 0 0;
+    }
+    @include tablet{
+        max-width: 100%;
+        margin: 0 0 rem(16px) 0;
+        padding: 20px;
+        &:not(:last-child){
+            margin: 0 0 16px 0;
+        }
+    }
+}
+.about__frame-title{
+    margin: 0 0 rem(12px) 0;
+    p{
+        font-weight: 600;
+        font-size: rem(36px);
+        line-height: rem(40px);
+    }
+}
+.about__frame-text{
+    p{
+        color: #4E4E4E;
+    }
+}
+.history-title{
+    margin: 0 0 rem(42px) 0;
+    @include tablet{
+        margin: 0 0 rem(20px) 0;
+    }
+}
+.history{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 rem(80px) 0;
+    @include mobile{
+        .btn-wrapper{
+            width: 100%;
+            .btn{
+                width: 100%;
+            }
+        }
+    }
+    @include tablet{
+        margin: 0 0 rem(40px) 0;
+        flex-direction: column;
+        .history__info{
+            max-width: 100%;
+            margin: 0 0 20px 0;
+            .history__text{
+                margin: 0 0 0 0;
+            }
+            .history__btn{
+                margin: 20px 0 0 0;
+            }
+        }
+        .history__image{
+            max-width: 100%;
+
+        }
+    }
+}
+.history__btn{
+    margin: 40px 0 0 0;
+}
+.history__info{
+    max-width: 460px;
+    width: 100%;
+    margin: 0 20px 0 0;
+}
+.history__text{
+    p{
+        font-weight: 400;
+        font-size: rem(16px);
+        line-height: rem(19px);
+        margin: 0 0 rem(16px) 0;
+    }
+    &.hidden{
+        display: none;
+    }
+}
+.history__image{
+    max-width: rem(399px);
+    width: 100%;
+    img{
+        width: 100%;
+    }
+}

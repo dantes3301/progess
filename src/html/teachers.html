@@ -1,0 +1,116 @@
+@@include('components/_header.html', {title: 'Коллектив'})
+    <div class="main-wrapper">
+        <div class="breadcrumbs__container">
+            <div class="container">
+                <nav>
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumb-item"><a href="#" class="breadcrumbs_link">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="#" class="breadcrumbs_link">Об учебном центре</a></li>
+                        <li class="breadcrumb-item"><p>Коллектив</p></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="training-center">
+            <div class="container">
+                <div class="training-center__row">
+                    <div class="training-center__column-one">
+                        <div class="training-center__menu">
+                            <div class="training-center__menu-item">
+                                <a href="#!" class="link link_grey">О центре</a>
+                            </div>
+                            <div class="training-center__menu-item active">
+                                <a href="#!" class="link link_grey">Коллектив</a>
+                            </div>
+                            <div class="training-center__menu-item">
+                                <a href="#!" class="link link_grey">История и достижения</a>
+                            </div>
+                            <div class="training-center__menu-item">
+                                <a href="#!" class="link link_grey">Отзывы</a>
+                            </div>
+                            <div class="training-center__menu-item">
+                                <a href="#!" class="link link_grey">Фотогаллерея</a>
+                            </div>
+                        </div>
+                        @@include('components/_selectTrainingCenter.html', {SelectTitle: 'Коллектив'})
+                    </div>
+                    <div class="training-center__column-two">
+                        <div class="training-center__title">
+                            <div class="title-wrapper">
+                                <h1>
+                                    Коллектив
+                                </h1>
+                            </div>
+                        </div>
+                        @@include('components/_leaders.html')
+                        <div class="administration">
+                            <div class="teachers__title">
+                                <div class="title-wrapper">
+                                    <h2>Административный состав</h2>
+                                </div>
+                            </div>
+                            <div class="teachers__cards">
+                                <div class="teachers__cards-slider">
+                                    <div class="teachers__card">
+                                        <div class="teachers__card-img">
+                                            <img src="images/teacherOne.jpg" alt="">
+                                        </div>
+                                        <div class="teacher__card-name">
+                                            <p>Иванов Иван Иванович</p>
+                                        </div>
+                                        <div class="teacher__card-text">
+                                            <p>Преподователь химии</p>
+                                        </div>
+                                    </div>
+                                    <div class="teachers__card">
+                                        <div class="teachers__card-img">
+                                            <img src="images/teacherTwo.jpg" alt="">
+                                        </div>
+                                        <div class="teacher__card-name">
+                                            <p>Иванов Иван Иванович</p>
+                                        </div>
+                                        <div class="teacher__card-text">
+                                            <p>Преподователь химии</p>
+                                        </div>
+                                    </div>
+                                    <div class="teachers__card">
+                                        <div class="teachers__card-img">
+                                            <img src="images/teacherOne.jpg" alt="">
+                                        </div>
+                                        <div class="teacher__card-name">
+                                            <p>Иванов Иван Иванович</p>
+                                        </div>
+                                        <div class="teacher__card-text">
+                                            <p>Преподователь химии</p>
+                                        </div>
+                                    </div>
+                                    <div class="teachers__card">
+                                        <div class="teachers__card-img">
+                                            <img src="images/teacherTwo.jpg" alt="">
+                                        </div>
+                                        <div class="teacher__card-name">
+                                            <p>Иванов Иван Иванович</p>
+                                        </div>
+                                        <div class="teacher__card-text">
+                                            <p>Преподователь химии</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team">
+                            <div class="team__title">
+                                <p>Хочешь стать частью нашей команды?</p>
+                            </div>
+                            <div class="team__text">
+                                <p>Отправляй резюме нам на почту: <a href="mailto:info@vprogress.ru">info@vprogress.ru</a> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @@include('components/_companiesFooter.html')
+    </div>
+    <script src="js/select/selectTrainingCenter.js"></script>
+@@include('components/_footer.html')
